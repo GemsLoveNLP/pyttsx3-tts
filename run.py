@@ -1,3 +1,6 @@
 from tts import *
 
-print_index()
+# print_index()
+# get_all()
+
+say("something")

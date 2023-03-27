@@ -3,7 +3,7 @@ import pyttsx3
 # engine setup
 engine = pyttsx3.init()
 
-# get the engine property possible parameters: 'rate', 'voice', 'voices', 'volume'
+# get the value of the current setting, possible parameters: 'rate', 'voice', 'voices', 'volume'
 get = engine.getProperty
 
 # say the msg outloud using the current setting
@@ -42,5 +42,13 @@ def test_voice(msg=""):
         print(f"Hello my name is {voice_.name}, my index is {i} {msg}")
         say(f"Hello my name is {voice_.name}, my index is {i} {msg}")
         i+=1
+
+# get all the current setting property
+def get_all():
+    PROPERTY = ['rate','voice','voices','volume']
+    print('--------------------------------------------------------------------------------------------')
+    for i in PROPERTY:
+        print(f"{i}: {get(i)}")
+        print('--------------------------------------------------------------------------------------------')
 
 
