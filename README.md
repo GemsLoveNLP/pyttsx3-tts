@@ -14,10 +14,10 @@ function descriptions:
   -get the value of the current setting
   -the name input is a string
   -possible value for name: 'rate', 'voice', 'voices', 'volume'
-    -rate: the speed that the voice is currently speaking in (in word per minute)
-    -voice: the voice that is currently in used
-    -voices: all the possible voice that can be selected
-    -volume: the loudness of the current speech setting (value between 0.0-1.0)
+  -rate: the speed that the voice is currently speaking in (in word per minute)
+  -voice: the voice that is currently in used
+  -voices: all the possible voice that can be selected
+  -volume: the loudness of the current speech setting (value between 0.0-1.0)
   -NOTE: this function is a shortened form of engine.getProperty(name) which is made for convenience check out the ref for more info
 
 2. volume(volume)
