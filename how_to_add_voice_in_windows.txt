@@ -1,0 +1,29 @@
+1. Search the windows settings for "speech setting"
+2. Scroll down to "Manage voices" and click the Add voices button
+3. Select the language you want and press add to download, then restart the settings and the added voice should be listed under Installed voice packages
+4. Try running print_index() to see if those voices had been added (In the case that it hadn't go to the rest of the steps, else yay you're done)
+-----------------------------------------------------------------
+5. Go to the windows search and search for Registry editor
+6. Expand the HKEY_LOCAL_MACHINE folder
+7. Exapnd the SOFTWARE folder
+8. Expand the Microsoft folder
+9. Expand both the Speech, Speech_OneCore folder (after this step do for both the folders)
+10. Expand Voices
+11. Expand Tokens
+12. The voice you want should be in the Tokens folder of Speech_OneCore but not of Speech
+13. Right click on the folder of the voice you wanted and select Export (preferably to desktop so we can edit it easily),(named it using the voice name for convenience)
+14. Right click on the exported file (in my case it's in desktop) and choose Edit (If you're in windows 11 then click show more option first then edit)
+15. Now it should be opened in a text editor
+16. Click Edit button next to the File button
+17. Click replace
+18. Give the first slot "Speech_OneCore", and the second slot "Speech" (do not include the quote sign)
+  - this step should change the file in such a way that the Speech_OneCore is changed to Speech
+19. Save the file and exit the file
+20. Run the file
+21. Many windows will pop up to try and tell you that it's a bad idea, just ignore it and press okay till it's done
+22. Check the Tokens folder under the Speech folder mentioned in step 12., the voice that we changed should now be added here
+23. After this step, the voice should hopefully be added to your voices list in pyttsx3, you can check using the print_index() function
+------------------------------------------------------------------
+Additional Notes:
+- The voice that are listed as something that is not English can read English poorly but can read out their own alphabet such as Pattara for Thai
+- The voice I find most "Frenchy" is the voice named Sean (Ireland)
